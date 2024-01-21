@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MoneyNote"
+             x:Class="MoneyNote.CategoryPage" >
+
+    <Grid Margin="60,10,60,10" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="35" />
+            <RowDefinition Height="5" />
+            <RowDefinition Height="325" />
+            <RowDefinition Height="5" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3.2*" />
+            <ColumnDefinition Width="6.8*" />
+        </Grid.ColumnDefinitions>
+
+        <ImageButton x:Name="back" Grid.Column="0" Grid.Row="0" Clicked="OnBackButtonClicked" HeightRequest ="28" WidthRequest ="28" HorizontalOptions="StartAndExpand" Source="back.jpg" />
+        <Label x:Name="categoryTitle" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" FontSize="22" HorizontalOptions="CenterAndExpand" Text="Category" />
+        <local:CommonButtonView Grid.Column="1" Grid.Row="0" />
+
+        <Label Text="Add Category" FontSize="20" Grid.Column="0" Grid.Row="1" HorizontalOptions="StartAndExpand" />
+        <ImageButton Grid.Column="1" Grid.Row="1" Source="enter.jpg" HeightRequest ="20" WidthRequest ="20" HorizontalOptions="EndAndExpand"  Clicked="OnEnterButtonClicked" />
+
+        <BoxView Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2"
+          HeightRequest="2"
+          Color="DarkGray"
+          HorizontalOptions="FillAndExpand" />
+
+        <ScrollView x:Name="listContainer" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" >
+            <VerticalStackLayout x:Name="categoryList" >
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <BoxView Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4"
+          HeightRequest="2"
+          Color="DarkGray"
+          HorizontalOptions="FillAndExpand" />
+
+
+    </Grid>
+    
+</ContentPage>

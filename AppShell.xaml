@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MoneyNote.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MoneyNote"
+    Shell.FlyoutBehavior="Disabled" >
+
+    
+    <ShellContent
+            Title=""
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+
+    <ShellContent
+            Title=""
+            ContentTemplate="{DataTemplate local:ReportPage}"
+            Route="ReportPage" />
+
+
+    <ShellContent
+            Title=""
+            ContentTemplate="{DataTemplate local:CategoryPage}"
+            Route="CategoryPage" />
+    
+    <ShellContent
+            Title=""
+            ContentTemplate="{DataTemplate local:NewCategoryPage}"
+            Route="NewCategoryPage" />
+
+</Shell>
